@@ -1,0 +1,105 @@
+@import 'todoApp';
+
+.todo-body {
+  width: 90%;
+
+  .todo-list {
+    width: 100%;
+
+    .list-item-container {
+      display: flex;
+      height: 5rem;
+      margin-bottom: 1rem;
+    }
+
+    .list-item {
+      height: 100%;
+      width: 100%;
+      @include flexBox();
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0.5rem 1.5rem;
+      background-color: #fff;
+      cursor: pointer;
+      padding-right: 10rem;
+
+      &-check {
+        height: 3rem;
+        width: 3rem;
+        background-color: #fff;
+        position: relative;
+
+        .border {
+          position: absolute;
+          display: inline-block;
+          height: 1rem;
+          width: 1rem;
+
+          &-1 {
+            top: 0;
+            left: 0;
+            border-top: 2px solid #6593a6;
+            border-left: 2px solid #6593a6;
+          }
+
+          &-2 {
+            bottom: 0;
+            left: 0;
+            border-bottom: 2px solid #6593a6;
+            border-left: 2px solid #6593a6;
+          }
+
+          &-3 {
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid #6593a6;
+            border-right: 2px solid #6593a6;
+          }
+
+          &-4 {
+            top: 0;
+            right: 0;
+            border-top: 2px solid #6593a6;
+            border-right: 2px solid #6593a6;
+          }
+        }
+
+        &-item {
+          width: 2rem;
+          height: 2rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .active {
+          background-color: #6593a6;
+        }
+      }
+
+      &-title {
+        font-size: 1.6rem;
+        color: #999;
+        margin-left: 5rem;
+      }
+
+      .line-through {
+        text-decoration: line-through;
+      }
+
+      &-btn {
+        padding: 1rem;
+        background-color: #f0788c;
+        color: rgb(56, 55, 55);
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ce5b6e;
+        }
+      }
+    }
+  }
+}
